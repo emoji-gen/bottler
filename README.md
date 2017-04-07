@@ -1,6 +1,6 @@
 # Bottler
 
-Cookie serializer and deserializer library for Java.
+:cookie: Cookie serializer and deserializer library for Java.
 
 ## Getting Started
 TODO
