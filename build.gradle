@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+    }
+}
+
+apply plugin: 'java'
+
+group 'moe.pine'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.6
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.jetbrains:annotations:13.0'
+    compile 'commons-io:commons-io:2.5'
+    testCompile 'junit:junit:4.11'
+}
