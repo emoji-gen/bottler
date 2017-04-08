@@ -23,7 +23,7 @@ CookieStoreUtils.readFrom(store, is); // Restore!!
 ## Test
 
 ```
-$ ./gradlew clean test
+$ ./gradlew clean check
 ```
 
 ## License
