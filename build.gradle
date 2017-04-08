@@ -11,6 +11,8 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'com.github.kt3k.coveralls'
 
 group 'moe.pine'
 version '1.0-SNAPSHOT'
@@ -25,4 +27,39 @@ dependencies {
     compile 'org.jetbrains:annotations:13.0'
     compile 'commons-io:commons-io:2.5'
     testCompile 'junit:junit:4.11'
+}
+
+jacoco {
+    toolVersion = '0.7.6.201602180812'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.enabled true
+    }
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.11'
+}
+
+task findConvensions << {
+    println project.getConvention()
 }
