@@ -4,7 +4,7 @@ jdk:
   - oraclejdk7
 
 env:
-  - GRADLE_OPTS="-Xmx512m -XX:MaxPermSize=512m"
+  - GRADLE_OPTS="-Xmx512m"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
