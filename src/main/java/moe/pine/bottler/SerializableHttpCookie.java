@@ -56,6 +56,7 @@ public final class SerializableHttpCookie implements Serializable {
         newCookie.comment = cookie.getComment();
         newCookie.commentURL = cookie.getCommentURL();
         newCookie.toDiscard = cookie.getDiscard();
+        newCookie.domain = cookie.getDomain();
         newCookie.maxAge = cookie.getMaxAge();
         newCookie.path = cookie.getPath();
         newCookie.portlist = cookie.getPortlist();
@@ -82,6 +83,7 @@ public final class SerializableHttpCookie implements Serializable {
         cookie.setComment(this.comment);
         cookie.setCommentURL(this.commentURL);
         cookie.setDiscard(this.toDiscard);
+        cookie.setDomain(this.domain);
         cookie.setMaxAge(this.maxAge);
         cookie.setPath(this.path);
         cookie.setPortlist(this.portlist);

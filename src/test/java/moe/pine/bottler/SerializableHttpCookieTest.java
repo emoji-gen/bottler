@@ -16,6 +16,7 @@ public class SerializableHttpCookieTest {
         cookie.setComment("comment");
         cookie.setCommentURL("commentURL");
         cookie.setDiscard(true);
+        cookie.setDomain("example.com");
         cookie.setMaxAge(12345L);
         cookie.setPath("/");
         cookie.setPortlist("443");
@@ -29,6 +30,7 @@ public class SerializableHttpCookieTest {
         Assert.assertEquals(cookie.getComment(), newCookie.getComment());
         Assert.assertEquals(cookie.getCommentURL(), newCookie.getCommentURL());
         Assert.assertEquals(cookie.getDiscard(), newCookie.getDiscard());
+        Assert.assertEquals(cookie.getDomain(), newCookie.getDomain());
         Assert.assertEquals(cookie.getMaxAge(), newCookie.getMaxAge());
         Assert.assertEquals(cookie.getPath(), newCookie.getPath());
         Assert.assertEquals(cookie.getPortlist(), newCookie.getPortlist());
@@ -44,6 +46,7 @@ public class SerializableHttpCookieTest {
         cookie.setValue("value");
         cookie.setComment("comment");
         cookie.setDiscard(true);
+        cookie.setDomain("example.com");
         cookie.setMaxAge(12345L);
         cookie.setPath("/");
         cookie.setPortlist("443");
@@ -57,6 +60,7 @@ public class SerializableHttpCookieTest {
         Assert.assertEquals(newCookie.getComment(), cookie.getComment());
         Assert.assertEquals(newCookie.getCommentURL(), cookie.getCommentURL());
         Assert.assertEquals(newCookie.getDiscard(), cookie.getDiscard());
+        Assert.assertEquals(newCookie.getDomain(), cookie.getDomain());
         Assert.assertEquals(newCookie.getMaxAge(), cookie.getMaxAge());
         Assert.assertEquals(newCookie.getPath(), cookie.getPath());
         Assert.assertEquals(newCookie.getPortlist(), cookie.getPortlist());
