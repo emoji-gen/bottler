@@ -2,6 +2,8 @@
 
 :cookie: Cookie serializer and deserializer library for Java.
 
+![](cookie.jpg)
+
 ## Getting Started
 TODO
 
