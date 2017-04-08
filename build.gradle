@@ -6,7 +6,6 @@ buildscript {
     dependencies {
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
     }
 }
 
@@ -65,3 +64,5 @@ task wrapper(type: Wrapper) {
 task findConvensions << {
     println project.getConvention()
 }
+
+apply from: './gradle/bintray.gradle'
