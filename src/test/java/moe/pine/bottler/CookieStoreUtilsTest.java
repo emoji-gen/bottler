@@ -16,6 +16,12 @@ import java.util.List;
  */
 public class CookieStoreUtilsTest {
     @Test
+    public void testConstructor() {
+        // Bean needs default constructor
+        new CookieStoreUtils();
+    }
+
+    @Test
     public void testSaveTo() throws URISyntaxException, IOException {
         CookieManager cookieManager =
                 new CookieManager(null, CookiePolicy.ACCEPT_ALL);
