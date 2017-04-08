@@ -9,3 +9,7 @@ env:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - ./gradlew coveralls
+
+notifications:
+  slack:
+    - secure: "kc7L19AT3yXX+lDkiXsUYBoTgKKtnF0qYFUHw3oq2Ujbl7WHbSo1WCtWSfLyH7RNcm0xtg0ajROdW+r0oy740EwixlDeUSUesBxcocLiuz3KPQbweq9mF4LqZ85kb3vpaWYapm8YnbofWd4XZ32A5s95+E1ewUXYQZqSGQ+4Nsr7t1RopgGeJd7DbzE/YEYVGz3WCnpq1n/pPM/XI0A6wb5qLEjLu44M0Qv8iLGXCLtsH4H0hRnSJb8gBvrZfFB2+fYIRovbrSqzvrWE+y8sfFHtaYIJ9xqxfdgFZosO7IpUAIEsJt7Dj09grqp64c4qsLa6iDBzZC/fDGM46KYCjlFXNOyp2+8IJC7Nb0xlQscNPbsLScemgBRx2bSFYl6alsziTFE6Q1fdLds3QlcQtt3FkwollmpwsBqE+wqeSBCAAgHurgwfIJGqBLSkYgSwchnLAxqGODvQypkHEaBpGC4B2j4S+8Y1R19wDAdeyJLMl9qrNGolm1faIaDA7cFJeViYmMFCR2Y+sQW4dgr9StM2cAH8Y6F4YAmVS46RGJPlqe7IzyS5jhAM4WAM/lCY7G3sT0COLCpmRxP7SCrLvW8hpQKzjwo5kVdWFKOI54bCaBNAz/mREIfsQbflszEw09xhkpy5g9sQZ56yg/CNGwOLmCLAbAjyZYbUD8GN+y8="
