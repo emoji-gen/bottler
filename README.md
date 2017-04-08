@@ -1,4 +1,4 @@
-# Bottler &nbsp;[![Build Status](https://travis-ci.org/emoji-gen/bottler.svg?branch=master)](https://travis-ci.org/emoji-gen/bottler)
+# Bottler &nbsp;[![Build Status](https://travis-ci.org/emoji-gen/bottler.svg?branch=master)](https://travis-ci.org/emoji-gen/bottler) [![codecov](https://codecov.io/gh/emoji-gen/bottler/branch/master/graph/badge.svg)](https://codecov.io/gh/emoji-gen/bottler)
 
 :cookie: Cookie serializer and deserializer library for Java.
 
