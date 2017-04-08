@@ -75,7 +75,7 @@ public final class SerializableHttpCookie implements Serializable {
     @NotNull
     public HttpCookie toHttpCookie() {
         if (this.name == null) {
-            throw new IllegalArgumentException("Illegal cookie name");
+            throw new IllegalStateException("Illegal cookie name");
         }
 
         HttpCookie cookie = new HttpCookie(this.name, this.value);
