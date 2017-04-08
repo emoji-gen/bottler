@@ -27,4 +27,4 @@ $ ./gradlew clean test
 ```
 
 ## License
-MIT &copy; Pine Mizune
+MIT &copy; [Emoji Generator](https://emoji.pine.moe/)
