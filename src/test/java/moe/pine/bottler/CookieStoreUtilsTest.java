@@ -4,10 +4,9 @@ import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -46,5 +45,21 @@ public class CookieStoreUtilsTest {
         List<HttpCookie> saveCookie = newCookieStore.get(uri);
         Assert.assertEquals("hello", saveCookie.get(0).getName());
         Assert.assertEquals("world", saveCookie.get(0).getValue());
+    }
+
+    @Test
+    public void testReadFrom_nonHashMap() throws IOException{
+        CookieManager cookieManager =
+                new CookieManager(null, CookiePolicy.ACCEPT_ALL);
+        CookieStore cookieStore = cookieManager.getCookieStore();
+
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(os);
+        oos.writeObject(new ArrayList<Integer>());
+
+        ByteArrayInputStream is = new ByteArrayInputStream(os.toByteArray());
+        CookieStoreUtils.readFrom(cookieStore, is);
+
+        Assert.assertEquals(0, cookieStore.getCookies().size());
     }
 }
