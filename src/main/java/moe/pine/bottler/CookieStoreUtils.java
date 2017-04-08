@@ -26,8 +26,6 @@ public final class CookieStoreUtils {
         List<URI> uris = store.getURIs();
         for (URI uri : uris) {
             List<HttpCookie> cookies = store.get(uri);
-            if (cookies.size() == 0) continue;
-
             List<SerializableHttpCookie> serializableHttpCookies =
                     new ArrayList<SerializableHttpCookie>(cookies.size());
             for (HttpCookie cookie : cookies) {
