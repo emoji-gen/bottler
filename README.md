@@ -38,5 +38,11 @@ CookieStoreUtils.readFrom(store, is); // Restore!!
 $ ./gradlew clean check
 ```
 
+## Upload Bintray
+
+```
+$ ./gradlew clean assemble bintrayUpload
+```
+
 ## License
 MIT &copy; [Emoji Generator](https://emoji.pine.moe/)
