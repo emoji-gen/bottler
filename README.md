@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    compile 'compile 'moe.pine:bottler:0.1.0''
+    compile 'moe.pine:bottler:0.1.0'
 }
 ```
 
