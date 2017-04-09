@@ -5,7 +5,17 @@
 ![](cookie.jpg)
 
 ## Getting Started
-TODO
+Please type it in your build.gradle file.
+
+```groovy
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'compile 'moe.pine:bottler:0.1.0''
+}
+```
 
 ## Usage
 
