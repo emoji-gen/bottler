@@ -61,8 +61,15 @@ public final class SerializableHttpCookie implements Serializable {
         newCookie.path = cookie.getPath();
         newCookie.portlist = cookie.getPortlist();
         newCookie.secure = cookie.getSecure();
-        newCookie.httpOnly = cookie.isHttpOnly();
         newCookie.version = cookie.getVersion();
+
+        // for Android (API level 24)
+        // https://developer.android.com/reference/java/net/HttpCookie.html#isHttpOnly()
+        try {
+            newCookie.httpOnly = cookie.isHttpOnly();
+        } catch (NoSuchMethodError e) {
+            newCookie.httpOnly = false;
+        }
 
         return newCookie;
     }
@@ -88,8 +95,14 @@ public final class SerializableHttpCookie implements Serializable {
         cookie.setPath(this.path);
         cookie.setPortlist(this.portlist);
         cookie.setSecure(this.secure);
-        cookie.setHttpOnly(this.httpOnly);
         cookie.setVersion(this.version);
+
+        // for Android (API level 24)
+        // https://developer.android.com/reference/java/net/HttpCookie.html#setHttpOnly(boolean)
+        try {
+            cookie.setHttpOnly(this.httpOnly);
+        } catch (NoSuchMethodError e) {
+        }
 
         return cookie;
     }
