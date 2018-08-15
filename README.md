@@ -32,13 +32,14 @@ ByteArrayInputStream is = new ByteArrayInputStream(os.toByteArray());
 CookieStoreUtils.readFrom(store, is); // Restore!!
 ```
 
-## Test
+## Development
+### Test
 
 ```
 $ ./gradlew clean check
 ```
 
-## Upload Bintray
+### Upload Bintray
 
 ```
 $ ./gradlew clean assemble bintrayUpload
