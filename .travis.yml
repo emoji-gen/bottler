@@ -4,9 +4,6 @@ jdk:
   - oraclejdk9
   - openjdk10
 
-env:
-  - GRADLE_OPTS="-Xmx512m"
-
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - ./gradlew coveralls
